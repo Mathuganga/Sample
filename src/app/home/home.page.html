@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Welcome User</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+    <ion-item>
+      <ion-label position="floating">Full name</ion-label>
+      <ion-input type="text" class="form-control" id="name" 
+      placeholder="Enter full name" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">ID</ion-label>
+      <ion-input type="text" class="form-control" id="id" 
+      placeholder="Enter Your Id" formControlName="id"></ion-input>
+    </ion-item>
+
+    <ion-button class="btn btn-primary" [disabled]="formGroup && !formGroup.valid" type="submit">Submit Form</ion-button>
+  </form>
+</ion-content>
