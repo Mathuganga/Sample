@@ -15,10 +15,6 @@ const routes: Routes = [
     path: 'button',
     loadChildren: () => import('./button/button.module').then( m => m.ButtonPageModule)
   },
-  {
-    path: 'device',
-    loadChildren: () => import('./device/device.module').then( m => m.DevicePageModule)
-  },
 ];
 
 @NgModule({
