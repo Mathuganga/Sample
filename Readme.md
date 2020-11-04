@@ -12,3 +12,6 @@ npm install
 
 To run
 ionic serve
+
+To test 
+npm test
